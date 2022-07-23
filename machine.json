@@ -1,0 +1,51 @@
+[
+    {
+        "name": "Convert XMFA to gapped GFF3s",
+        "id": "xmfa2gff3",
+        "description": "",
+        "panel_section_name": "Annotation",
+        "help": "What it does ============ XMFA Alignments are great, but now you need a way to visualize this data! This tool provides a conversion step to GFF3 formatted output consiting of ``match``es and ``match_part``s with scores indicating percent identity over that chunk of sequence. A rendering of the output GFF3 file in JBrowse is shown below: .. image:: $PATH_TO_IMAGES/xmfa2gff3.png" ,
+        "guid": "toolshed.g2.bx.psu.edu/repos/iuc/progressivemauve/xmfa2gff3/2015_02_13.1"
+      },
+      {
+        "name": "BamLeftAlign",
+        "id": "bamleftalign",
+        "description": "indels in BAM datasets",
+        "panel_section_name": "Variant Calling",
+        "help": "When calling indels, it is important to homogenize the positional distribution of insertions and deletions in the input by using left realignment. Left realignment will place all indels in homopolymer and microsatellite repeats at the same position, provided that doing so does not introduce mismatches between the read and reference other than the indel. This method is computationally inexpensive and handles the most common classes of alignment inconsistency. This is leftalign utility from FreeBayes package." ,
+        "guid": "toolshed.g2.bx.psu.edu/repos/devteam/freebayes/bamleftalign/1.3.1"
+      },
+      {
+        "name": "Evaluate a Fitted Model",
+        "id": "sklearn_fitted_model_eval",
+        "description": "using a new batch of labeled data",
+        "panel_section_name": "Machine Learning",
+        "help": "**What it does** Given a fitted estimator and a labeled dataset, this tool outputs the performances of the fitted estimator on the labeled dataset with selected scorers. For the estimator, this tool supports fitted sklearn estimators (pickled) and trained deep learning models (model skeleton + weights). For input datasets, it supports the following: - tabular - sparse **Output** A tabular file containing performance scores, e.g.: ======== ======== ========= accuracy f1_macro precision ======== ======== ========= 0.8613   0.6759   0.7928 ======== ======== ========= " ,
+        "guid": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_fitted_model_eval/sklearn_fitted_model_eval/1.0.8.3"
+      },
+      {
+        "name": "Model Prediction",
+        "id": "model_prediction",
+        "description": "predicts on new data using a preffited model",
+        "panel_section_name": "Machine Learning",
+        "help": "**What it does** Given a fitted and new data sets, this tool outpus the prediction results on the data sets via invoking the estimator's `predict` or `predict_proba` method. For estimator, this tool supports fitted sklearn estimators (pickled) and trained deep learning models (model skeleton + weights). It predicts on three different dataset inputs, - tabular - sparse - bio-sequences in a fasta file - reference genome and variant call file" ,
+        "guid": "toolshed.g2.bx.psu.edu/repos/bgruening/model_prediction/model_prediction/1.0.8.3"
+      },
+      {
+        "name": "Train, Test and Evaluation",
+        "id": "sklearn_train_test_eval",
+        "description": "fit a model using part of dataset and evaluate using the rest",
+        "panel_section_name": "Machine Learning",
+        "help": "****What it does** Given an estimator and dataset, this tool fits the estimator with part of the datasets and evalue the estimator performance of the fitted estimator on the rest of the datasets. It consists of two modes: train-test and train-val-test. - train-test: data sets will be split into train and test portions. Estimator is training on the train portion, and performance estimator is evaluated on the test portion. - train-val-test: data sets are split estimator into three portions, train, val and test. Validations happen along with the training process, which is often useful estimator in **deep learnings**. **Output** Performance estimator scores." ,
+        "guid": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_train_test_eval/sklearn_train_test_eval/1.0.8.3"
+      },
+      {
+        "name": "Deep learning training and evaluation",
+        "id": "keras_train_and_eval",
+        "description": "conduct deep training and evaluation either implicitly or explicitly",
+        "panel_section_name": "Machine Learning",
+        "help": "**What it does** Given a pre-built keras deep learning model and labeled training dataset, this tool works in two modes. - Train and Validate: training dataset is split into train and validation portions. The model fits on the train portion, in the meantime performances are validated on the validation portion multiple times along with the training progressing. Finally, a fitted model (skeleton + weights) and its validation performance scores are outputted. - Train, Validate and and Evaluate: training dataset is split into three portions, train, val and test. The same `Train and Validate` happens on the train and val portions. The test portion is hold out exclusively for testing (evaluation). As a result, a fitted model (skeleton + weights) and test performance scores are outputted. In both modes, besides the performance scores, the true labels and predicted values are able to be ouputted, which could be used in generating plots in other tools, machine learning visualization extensions, for example. Note that since all training and model parameters are accessible and changeable in the `Hyperparameter Swapping` section, the training and evaluation processes are transparent and fully controllable. **Input** - tabular - sparse - `sequnences in a fasta file` to work with DNA, RNA and Proteins with corresponding fasta data generator - `reference genome and intervals` exclusively work with `GenomicIntervalBatchGenerator`. **Output** - performance scores from evaluation - fitted estimator skeleton and weights - true labels or values and predicted values from the evaluation" ,
+        "guid": "toolshed.g2.bx.psu.edu/repos/bgruening/keras_train_and_eval/keras_train_and_eval/1.0.8.3"
+      }
+
+]
