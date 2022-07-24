@@ -38,7 +38,7 @@ import pprint
 from utils import to_unicode
 # !!!
 
-TOOLS_JSON = 'data/tools.json'
+TOOLS_JSON = 'test-data/tools.json'
 # TOOLS_JSON = 'data/machine.json'
 INDEX_DIR = 'index'
 # INDEX_DIR = '/home/cameron/dev/galaxy/galaxy/database/tool_search_index/default'
@@ -227,7 +227,7 @@ def main():
     if query == '--build':
         toolbox.build_index()
     else:
-        results = toolbox.search(query)
+        r = toolbox.search(query)
 
 
 if __name__ == '__main__':
