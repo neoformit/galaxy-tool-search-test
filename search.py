@@ -30,7 +30,6 @@ from whoosh.scoring import (
 )
 from whoosh.qparser import (
     MultifieldParser,
-    OrGroup,
 )
 from whoosh.writing import AsyncWriter
 

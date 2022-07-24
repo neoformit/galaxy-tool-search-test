@@ -14,8 +14,3 @@ INDEX = GALAXY_INDEX
 ix = open_dir(INDEX)
 print("Schema:")
 pprint.pprint(ix.schema)
-qp = QueryParser("name", schema=ix.schema)
-with ix.searcher() as s:
-    q = qp.parse(u"group")
-    results = s.search(q)
-    pprint.pprint(results[0])
