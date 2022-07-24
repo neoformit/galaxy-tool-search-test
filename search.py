@@ -38,7 +38,8 @@ import pprint
 from utils import to_unicode
 # !!!
 
-TOOLS_JSON = 'machine.json'
+TOOLS_JSON = 'data/tools.json'
+# TOOLS_JSON = 'data/machine.json'
 INDEX_DIR = 'index'
 # INDEX_DIR = '/home/cameron/dev/galaxy/galaxy/database/tool_search_index/default'
 
